@@ -7,9 +7,7 @@ module.exports.handler = serverless(app)
 
 router.get('/', async( req, res, next )=> {
   console.log('hello world')
-  res.json({
-    "hello": "world"
-  })
+  res.send("hello world")
 })
 
 router.get('/test', async( req, res, next )=> {
