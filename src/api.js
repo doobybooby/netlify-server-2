@@ -5,6 +5,9 @@ const router = express.Router()
 
 module.exports.handler = serverless(app)
 
+app.use(express.json())
+
+
 router.get('/', async( req, res, next )=> {
   console.log('hello world')
   res.send("hello world")
