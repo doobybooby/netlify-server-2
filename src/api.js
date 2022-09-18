@@ -12,4 +12,11 @@ router.get('/', async( req, res, next )=> {
   })
 })
 
-app.use('/.netlify/functions/api', router)
+router.get('/test', async( req, res, next )=> {
+  console.log('hello world')
+  res.json({
+    "hello": "world"
+  })
+})
+
+app.use('.netlify/functions/api', router)
